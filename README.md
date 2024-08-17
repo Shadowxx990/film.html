@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film İzleme Sitesi</title>
+</head>
+<body>
+    <h1>Film İzleme Sitesine Hoş Geldiniz</h1>
+    <p>Burada favori filmlerinizi izleyebilirsiniz.</p>
+</body>
+</html>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #1c1c1c;
+        color: white;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    h1 {
+        color: #ffcc00;
+    }
+
+    p {
+        font-size: 18px;
+        text-align: center;
+    }
+</style>
+<div id="login-form">
+    <h2>Giriş Yap</h2>
+    <form onsubmit="return checkLogin()">
+        <label for="username">Kullanıcı Adı:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Şifre:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" value="Giriş Yap">
+    </form>
+    <p id="login-error" style="color: red; display: none;">Yanlış kullanıcı adı veya şifre!</p>
+</div>
+<div class="film-list">
+    <div class="film">
+        <img src="https://via.placeholder.com/200x300" alt="Film 1">
+        <h2>Film 1</h2>
+        <p>Bu, Film 1 hakkında kısa bir açıklamadır.</p>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film İzleme Sitesi</title>
+</head>
+<body>
+    <h1>Film İzleme Sitesine Hoş Geldiniz</h1>
+    <p>Burada favori filmlerinizi izleyebilirsiniz.</p>
+
+    <div class="film-list">
+        <div class="film">
+            <img src="https://via.placeholder.com/200x300" alt="Film 1">
+            <h2>Film 1</h2>
+            <p>Bu, Film 1 hakkında kısa bir açıklamadır.</p>
+        </div>
+        <div class="film">
+            <img src="https://via.placeholder.com/200x300" alt="Film 2">
+            <h2>Film 2</h2>
+            <p>Bu, Film 2 hakkında kısa bir açıklamadır.</p>
+        </div>
+        <div class="film">
+            <img src="https://via.placeholder.com/200x300" alt="Film 3">
+            <h2>Film 3</h2>
+            <p>Bu, Film 3 hakkında kısa bir açıklamadır.</p>
+        </div>
+    </div>
+</body>
+<script>
+    function checkLogin() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        // Basit kontrol: Sabit bir kullanıcı adı ve şifre
+        if (username === 'admin' && password === '1234') {
+            document.getElementById('login-form').style.display = 'none';
+            document.querySelector('.film-list').style.display = 'flex';
+        } else {
+            document.getElementById('login-error').style.display = 'block';
+        }
+        return false; // Formun varsayılan olarak gönderilmesini engeller
+    }
+</script>
+<style>
+ont-family: Arial, sans-serif;
+        background-color: #1c1c1c;
+        color: white;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    h1 {
+        color: #ffcc00;
+    }
+
+    p {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .film-list {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        max-width: 800px;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .film {
+        background-color: #333;
+        border-radius: 8px;
+        padding: 10px;
+        margin: 10px;
+        width: 200px;
+        text-align: center;
+    }
+
+    .film img {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .film h2 {
+        font-size: 20px;
+        color: #ffcc00;
+        margin: 10px 0;
+    }
+
+    .film p {
+        font-size: 14px;
+        color: #ddd;
+    }
+</style>
+</html>       
